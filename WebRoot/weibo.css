@@ -1,0 +1,142 @@
+#bd {
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 150%;
+	font-family: 'Open Sans', sans-serif;
+	color: #7b8993;
+	background: #EEEEFF;
+	text-align: center;
+}
+
+#show_tips {
+	width: 500px;
+	height: auto;
+	position: relative;
+	margin: auto;
+	padding: 15%;
+}
+
+a {
+	text-decoration: none;
+}
+
+#main_bd {
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 150%;
+	font-family: 'Open Sans', sans-serif;
+	color: #7b8993;
+	background: #EEEEFF;
+}
+
+#container {
+	width: 100%;
+	height: auto;
+}
+
+#menu {
+	background-color: #AAB9B9;
+	height: 650px;
+	width: 180px;
+	float: left;
+}
+
+#menu_item {
+	font-weight: 300;
+	line-height: 150%;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+#content {
+	height: 470px;
+	width: 1100px;
+	float: left;
+}
+
+#content-area {
+	height: 280px;
+	width: 330px;
+	float: left;
+	margin-left: 14%;
+	margin-top: 16%;
+}
+
+#content-area-ww {
+	height: 350px;
+	width: 600px;
+	float: left;
+	margin-left: 14%;
+	margin-top: 16%;
+}
+
+#form-wrapper {
+	padding-top: 10%;
+	border-radius: 2px;
+	margin: 5px auto;
+	position: relative;
+	width: 375px;
+}
+
+form {
+	padding: 30px 20px 0;
+}
+
+#form-item {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#form-item input {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	height: 50px;
+	padding: 0 16px;
+	transition: background 0.3s ease-in-out;
+	width: 100%;
+}
+
+#form-item input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}
+
+#button-panel {
+	margin: 20px 0 0;
+	width: 100%;
+}
+
+#button-panel #button {
+	-webkit-appearance: none;
+	background: #009dff;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	height: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.3s ease-in-out;
+	width: 100%;
+}
+
+#button:hover {
+	background: #00c8ff;
+}
+
+@media only screen and (max-width : 320px) {
+	#form-wrapper {
+		padding-top: 10%;
+		border-radius: 2px;
+		margin: 50px auto;
+		position: relative;
+		width: 320px;
+	}
+}

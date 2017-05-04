@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="action" namespace="/" extends="struts-default">
+    
+    	<interceptors>
+            <interceptor name="myInterceptor" class="action.LoginInterceptor">
+            </interceptor>
+        </interceptors>
+
+        <default-action-ref name="index" />
+<!-- 
+        <global-results>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
+        </global-results>
+ -->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+        
+        <action name="*View" class="action.View" method="{1}View">
+            <result name="register">/register.jsp</result>
+            <result name="login">/login.jsp</result>
+            <result name="write">/write_weibo.jsp</result>
+            <result name="atten">/attention.jsp</result>
+            <result name="fans">/fans.jsp</result>
+        </action>
+        
+        <action name="login_success" class="action.MainLogin">
+        	<result name="main">/login_success.jsp</result>
+        	<result name="notlogin">/login.jsp</result>
+        	<interceptor-ref name="myInterceptor"></interceptor-ref>
+        	<interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+
+        <action name="register" class="action.Register">
+            <result name="T">/register_success.jsp</result>
+            <result name="F">/register_error.jsp</result>
+            <result name="error">/register.jsp</result>
+        </action>
+        
+        <action name="login" class="action.Login">
+            <result name="T">/login_success.jsp</result>
+            <result name="F">/login_error.jsp</result>
+            <result name="notlogin">/login.jsp</result>
+        </action>
+        
+        <action name="write" class="action.Write">
+            <result name="T">/login_success.jsp</result>
+        </action>
+        
+        <action name="atten" class="action.Atten">
+            <result name="T">/atten_success.jsp</result>
+            <result name="F">/atten_error.jsp</result>
+            <result name="like">/attention_like.jsp</result>
+        </action>
+        
+        <action name="noatten" class="action.NoAtten">
+            <result name="T">/noatten_success.jsp</result>
+            <result name="F">/attention.jsp</result>
+        </action>
+    </package>
+
+    <!-- Add packages here -->
+
+</struts>
